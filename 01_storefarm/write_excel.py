@@ -5,6 +5,14 @@ import xlsxwriter
 import sys
 from datetime import datetime
 
+"""
+xlsxwriter 패키지를 이용하여 기존에 있던 storefarm에서 받은 주문내역서를
+내부 공유형태로 변환해주는 프로그램입니다.
+
+"""
+
+
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 date_time= datetime.now()
@@ -14,10 +22,7 @@ date_time= datetime.now()
 data = get_data('20161122.xls')
 
 
-# xlsx data 생성
-# !! 생성한 날짜 기준으로 파일 이름 설정 해야함
-
-
+# 프로그램을 실행한 날짜를 기준으로 xlsx 파일을 생성해 줍니다.
 workbook = xlsxwriter.Workbook('{}_Firex.xlsx'.format(date_time.strftime('%Y%m%d')))
 worksheet = workbook.add_worksheet()
 
