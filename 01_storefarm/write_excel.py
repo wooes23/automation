@@ -65,13 +65,13 @@ for tit, rec in data.items():
         #마지막 숫자를 조절하여 열을 조절합니다
         worksheet.write('A{n}'.format(n=i+2), i, data_form)   #no
         worksheet.write('B{n}'.format(n=i+2), rec[i][0][:8], data_form)    #주문일 pass
-        worksheet.write('C{n}'.format(n=i+2), rec[i][12])   #품목
-        worksheet.write('D{n}'.format(n=i+2), rec[i][16])   #수량
-        worksheet.write('E{n}'.format(n=i+2), rec[i][7], data_form)   #수령인
-        worksheet.write('F{n}'.format(n=i+2), rec[i][23], data_form)   #우편번호
-        worksheet.write('G{n}'.format(n=i+2), rec[i][24])   #주소
-        worksheet.write('H{n}'.format(n=i+2), rec[i][22], data_form)   #연락처
-        worksheet.write('I{n}'.format(n=i+2), rec[i][25])   #배송메시지
+        worksheet.write('C{n}'.format(n=i+2), rec[i][16])   #품목
+        worksheet.write('D{n}'.format(n=i+2), rec[i][18])   #수량
+        worksheet.write('E{n}'.format(n=i+2), rec[i][6], data_form)   #수령인
+        worksheet.write('F{n}'.format(n=i+2), rec[i][28], data_form)   #우편번호
+        worksheet.write('G{n}'.format(n=i+2), rec[i][29])   #주소
+        worksheet.write('H{n}'.format(n=i+2), rec[i][27], data_form)   #연락처
+        worksheet.write('I{n}'.format(n=i+2), rec[i][30])   #배송메시지
 
 
 #title area
