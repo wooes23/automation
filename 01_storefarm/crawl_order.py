@@ -36,10 +36,26 @@ el_pw.send_keys(Keys.RETURN)
 
 
 #신규 주문내역이 있는지 확인
+el_new = driver.find_element_by_class_name('_new_order')
+text_new_order = int(el_new.text)
+
+# 신규 주문이 있을 경우
+if text_new_order > 0 :
+    el_new.click()
+
+    # 전체 주문내역 다운로드
+    el_order_down = driver.find_element_by_class_name('_excelDownloadBtn')
+    el_order_down.click()
+
+    # 다운로드 경로는 바탕화면
 
 
-# 주문내역이 있을 경우 주문내역 다운로드
-# 이떄 다운로드 경로는 바탕화면
+    # 주문이 몇개인지 확인
+    print 'new order :'+ str(text_new_order)
+
+else :
+    print 'new order :'+ str(text_new_order)
+
 
 
 # 다운로드 완료 후 주문내역을 선택한 뒤 발주 확인
